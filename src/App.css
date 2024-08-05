@@ -1,0 +1,100 @@
+body {
+    position: relative;
+    /* height: 100vh; */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* overflow: hidden; */
+    scroll-behavior: smooth;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 4, 255, 0.5), rgba(255, 40, 40, 0.007)), url('https://freefrontend.com/assets/img/css-social-media-icons/3D-CSS-Social-Tiles.gif');
+    /* https://miro.medium.com/v2/resize:fit:1200/1*lrPZajFbzNMYe6DJ1nhnwQ.gif */
+    /* https://buffer.com/resources/content/images/resources/wp-content/uploads/2016/06/report.gif */
+    background-repeat: repeat;
+    background-size: cover;
+     /* Adjust the opacity here */
+     opacity: 0.6;
+    z-index: -1; 
+    /* Make sure the overlay is behind the content */
+}
+
+/* Add some content styles to demonstrate */
+/* h1 {
+    color: white;
+    text-align: center;
+    margin-top: 50vh;
+    z-index: 1;
+    position: relative;
+} */
+
+/* body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+        url('https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #1e1e1e; /* Dark background for the track */
+    border-radius: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #4a4a4a; /* Dark thumb */
+    border-radius: 6px;
+    border: 3px solid #1e1e1e; /* Padding around the thumb */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #646464; /* Lighter color on hover */
+  }
+  
+
+  @keyframes appear {
+    from{
+      opacity: 0;
+      scale: 0;
+      
+      /* transform: translate(-100px); */
+      /* clip-path: inset(100% 100% 0); */
+    }
+    to{
+      opacity: 1;
+      scale: 1;
+      /* transform: translate(0px); */
+      /* clip-path: inset(0 0 0 0); */
+    }
+  }
+  .T-Block{
+    animation: appear 5s alternate;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+    
+  }
+
+
+  
+
+  .selected{
+    background-color: black;
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+  
